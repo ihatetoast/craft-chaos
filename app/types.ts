@@ -10,13 +10,13 @@ export type Author = {
 }
 
 export type Topic = 'knitting' | 'crochet' | 'embroidery' | 'hand sewing' | 'machine sewing' | 'felt' | 'misc crafts';
-
+export type MediaType = 'book' | 'magazine' | 'printout' | 'iron-on transfer';
 export type MediaEntry = {
   id: number;
   title: string;
-  author: Author | null;
+  author: Author[] | null;
   topics: Topic[];
-  mediaType: 'book' | 'magazine' | 'printout';
+  mediaType: MediaType;
   link: string | null;
   imageSrc: string;
   location: Location;
