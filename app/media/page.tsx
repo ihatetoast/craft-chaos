@@ -2,7 +2,7 @@ import React from 'react'
 
 
 
-const Books = () => {
+const Media = () => {
   return (
     <>
       <section>
@@ -36,4 +36,4 @@ const Books = () => {
   )
 }
 
-export default Books
+export default Media
