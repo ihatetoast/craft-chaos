@@ -1,47 +1,62 @@
 import Link from 'next/link';
 
+import { CraftCatetoryType } from './types';
+
+const craftCategories: CraftCatetoryType[] = [
+  {
+    id: 'knitting',
+    title: 'Knitting',
+    description: 'Knitting WIPs or yarns and patterns set aside for something planned.',
+    href: '/knitting',
+  },
+  {
+    id: 'crochet',
+    title: 'Crochet',
+    description: 'Crochet WIPs or yarns and patterns set aside for something planned.',
+    href: '/crochet',
+  },
+  {
+    id: 'needle-work',
+    title: 'Needlework',
+    description:
+      'Various embroidery and hand-sewing projects that have already been started or need finishing/framing.',
+    href: '/needle-work',
+  },
+  {
+    id: 'misc',
+    title: 'Miscellaneous Crafts',
+    description:
+      'WIPs from spinning, die-cutting, plushie making, anything under the sun.',
+    href: '/misc',
+  },
+  {
+    id: 'books',
+    title: 'Books, Mags, and Other Media',
+    description:
+      'Books, magazines, printouts, iron-on transfers, and other media or references.',
+    href: '/books',
+  },
+  {
+    id: 'materials',
+    title: 'Materials and Tools',
+    description:
+      'Knitting needles, hooks, straight needles, vinyl, doodads etc. A record of what I have and where it\'s stored.',
+    href: '/materials',
+  },
+];
+
 export default function Home() {
   return (
-    <main>
+    <main className='grow'>
       <p>Mini intro blah blah blah</p>
-      <ul>
-        <li>
-          <h2>
-            <Link href='/knitting'>Knitting</Link>
-          </h2>
-          <p>What to expect in the knitting page. wip, ufo, planned</p>
-        </li>
-        <li>
-          <h2>
-            <Link href='/crochet'>Crochet</Link>
-          </h2>
-          <p>What to expect in the crochet page. wip, ufo, planned</p>
-        </li>
-        <li>
-          <h2>
-            <Link href='/knitting'>Needlework</Link>
-          </h2>
-          <p>What to expect in the needlework page: wip, ufo, planned; freestyle, crewel, blackwork, needle point, sewing etc </p>
-        </li>
-        <li>
-          <h2>
-            <Link href='/misc'>Miscellaneous</Link>
-          </h2>
-          <p>What to expect in the misc page: spinning, cricket, upcycling</p>
-        </li>
-        <li>
-          <h2>
-            <Link href='/books'>Books and References</Link>
-          </h2>
-          <p>What to expect in the books page. list of books, scanned patterns, links. </p>
-        </li>
-        <li>
-          <h2>
-            <Link href='/materials'>Materials</Link>
-          </h2>
-          <p>What to expect in the knitting page: yarns floss, vinyl, needles, hooks, and beads. not photos of all but gen. </p>
-        </li>
-      </ul>
+      {craftCategories.map((cat) => (
+        <Link key={cat.id} href={cat.href}>
+          <div>
+            <h2>{cat.title}</h2>
+            <p>{cat.description}</p>
+          </div>
+        </Link>
+      ))}
     </main>
   );
 }

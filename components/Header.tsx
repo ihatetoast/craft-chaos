@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <header>
+    <header className="flex-none">
       <p>Craft Chaos: F those UFOs</p>
       <p>
         A digital catalog of my knitting, crochet, embroidery, and other crafting

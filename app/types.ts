@@ -1,3 +1,14 @@
+// home
+
+export type CraftCatetoryType = {
+  id: string;
+  title: string;
+  description: string;
+  href:string
+}
+
+
+// media
 export type Location = {
   onLoan: boolean;
   borrower: string | null;
@@ -18,7 +29,7 @@ export type MediaEntry = {
   topics: Topic[];
   mediaType: MediaType;
   link: string | null;
-  imageSrc: string;
+  imageSrc: string | null;
   location: Location;
   notes?: string;
 }
