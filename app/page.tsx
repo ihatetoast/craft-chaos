@@ -34,7 +34,7 @@ const craftCategories: CraftCatetoryType[] = [
     title: 'Books, Mags, and Other Media',
     description:
       'Books, magazines, printouts, iron-on transfers, and other media or references.',
-    href: '/books',
+    href: '/media',
   },
   {
     id: 'materials',
@@ -47,7 +47,7 @@ const craftCategories: CraftCatetoryType[] = [
 
 export default function Home() {
   return (
-    <main className='grow'>
+    <main className='grow  bg-white/50 p-4 sm:p-6 md:p-8'>
       <p>Mini intro blah blah blah</p>
       {craftCategories.map((cat) => (
         <Link key={cat.id} href={cat.href}>

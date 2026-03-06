@@ -1,12 +1,8 @@
 const Header = () => {
   return (
-    <header className="flex-none">
-      <p>Craft Chaos: F those UFOs</p>
-      <p>
-        A digital catalog of my knitting, crochet, embroidery, and other crafting
-        projects &mdash; tracking works in progress, (almost) finished pieces, and my
-        out-of-control stash of materials.
-      </p>
+    <header className="flex flex-col sm:flex-row flex-none bg-white rounded-t-lg  p-4 sm:p-6 md:p-8">
+      <h1 className="font-courgette text-2xl">Craft Chaos</h1>
+      <p className="text-sm sm:text-base">F those UFOs &amp; wipe out WIPs!</p>
     </header>
   );
 };

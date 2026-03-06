@@ -12,6 +12,7 @@ const courgette = Courgette({
 
 const libreBaskerville = Libre_Baskerville({
   variable: '--font-libre-baskerville',
+    weight: '400',
   subsets: ['latin'],
 });
 
@@ -29,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang='en' className='bg-linear-to-tr from-lime-600 to-yellow-200 p-4 sm:p-6 md:p-8'>
       <body
-        className={`${courgette.variable} ${libreBaskerville.variable} antialiased flex flex-col min-h-screen p-4 sm:p-6 md:p-8 bg-emerald-50 rounded-3xl`}
+        className={`${courgette.variable} ${libreBaskerville.variable} antialiased flex flex-col min-h-screen font-libre-baskerville`}
       >
         <Header />
         {children}
